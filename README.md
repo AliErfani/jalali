@@ -1,6 +1,6 @@
 morilog/jalali
 ======
-- This package compatible with Laravel 5
+- This package compatible with Laravel 5 and laravel 5.1
 
 - This package was forked from [Miladr/Jalali](http://github.com/miladr/jalai) in previous version and fixed bugs and customized by [Morilog](http://morilog.ir)
 
@@ -11,7 +11,7 @@ Run the Composer update comand
 
     $ composer require morilog/jalali
 
-If you are using Laravel 5.0 Next, add your new provider to the providers array of config/app.php as follows:
+If you are using Laravel 5.0 add your new provider to the providers array of config/app.php as follows:
 
 ```php
     'providers' => [
@@ -23,7 +23,7 @@ If you are using Laravel 5.0 Next, add your new provider to the providers array 
 
     ],
 ```
-And add two class aliases to the aliases array of config/app.php like these:
+and add two class aliases to the aliases array of config/app.php like these:
 ```php
     
     'alias' => [
@@ -32,7 +32,7 @@ And add two class aliases to the aliases array of config/app.php like these:
         'jDateTime' => 'Morilog\Jalali\Facades\jDateTime',
     ]
 ```
-If you are using Laravel 5.1 Next, add your new provider to the providers array of config/app.php as follows:
+If you are using Laravel 5.1 add your new provider to the providers array of config/app.php as follows:
 ```php
     'providers' => [
     // ...
@@ -41,7 +41,7 @@ If you are using Laravel 5.1 Next, add your new provider to the providers array 
     // ...
   ],
 ```
-And add two class aliases to the aliases array of config/app.php like these:
+and add two class aliases to the aliases array of config/app.php like these:
 ```php
 'aliases' => [
     // ...
