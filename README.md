@@ -11,7 +11,7 @@ Run the Composer update comand
 
     $ composer require morilog/jalali
 
-In your `config/app.php` add `'Morilog\Jalali\JalaliServiceProvider'` to the end of the `$providers` array
+If you are using Laravel 5.0 Next, add your new provider to the providers array of config/app.php as follows:
 
 ```php
     'providers' => [
@@ -22,17 +22,34 @@ In your `config/app.php` add `'Morilog\Jalali\JalaliServiceProvider'` to the end
         'Morilog\Jalali\JalaliServiceProvider',
 
     ],
-    .
-    .
-    .
-    .
-    .
+```
+And add two class aliases to the aliases array of config/app.php like these:
+```php
+    
     'alias' => [
         ...
         'jDate' => 'Morilog\Jalali\Facades\jDate',
         'jDateTime' => 'Morilog\Jalali\Facades\jDateTime',
     ]
 ```
+If you are using Laravel 5.1 Next, add your new provider to the providers array of config/app.php as follows:
+```php
+    'providers' => [
+    // ...
+    Collective\Html\HtmlServiceProvider::class,
+    Morilog\Jalali\JalaliServiceProvider::class,
+    // ...
+  ],
+```
+And add two class aliases to the aliases array of config/app.php like these:
+```php
+'aliases' => [
+    // ...
+      'jDate'     => Morilog\Jalali\Facades\jDate::class,
+      'jDateTime' => Morilog\Jalali\Facades\jDateTime::class,
+    // ...
+  ],
+ ```
 
 <a name="basic-usage"></a>
 ## Basic Usage
